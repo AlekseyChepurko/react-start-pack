@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 
-import initStore from './ducks/store';
+import initStore, { history } from './ducks/store';
 import SagasManager from './ducks/helpers/sagasManager';
-import { App } from './App';
+
+import Routes from './Routes'; // eslint-disable-line
 
 const store = initStore({});
 store.runSaga(SagasManager.getRootSaga());
@@ -13,15 +15,17 @@ store.runSaga(SagasManager.getRootSaga());
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <Provider store={ store }>
+        <Component history={ history } />
+      </Provider>
     </AppContainer>,
     document.getElementById('root')
   );
 };
-render(App);
+render(Routes);
 
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./App', () => { render(App); });
+  module.hot.accept('./', () => { render(Routes); });
 }
