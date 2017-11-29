@@ -82,8 +82,9 @@ function getClientEnvironment(publicUrl) {
       env[key] = JSON.stringify(raw[key]);
       return env;
     }, {}),
+    INSTAGRAM_CLIENT_ID: JSON.stringify(process.env.__INSTAGRAM_CLIENT_ID__ || ''),
   };
-
+  stringified.INSTAGRAM_CLIENT_ID = JSON.stringify(process.env.__INSTAGRAM_CLIENT_ID__ || '');
   return { raw, stringified };
 }
 

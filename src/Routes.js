@@ -27,7 +27,7 @@ Routes.propTypes = {
 };
 Routes.defaultProps = {
   history: {},
-  auth: true,
+  auth: false,
 };
 
 const mapStateToProps = (state) => ({
