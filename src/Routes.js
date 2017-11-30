@@ -31,7 +31,7 @@ Routes.defaultProps = {
 };
 
 const mapStateToProps = (state) => ({
-  auth: state.auth,
+  auth: !!state.Auth.token,
 });
 export default connect(mapStateToProps)(Routes);
 export { Routes };
