@@ -33,6 +33,7 @@ rules:
   no-plusplus: 0
   no-return-assign: 0
   quote-props: 0
+  curly: 0
   template-curly-spacing: [2, "always"]
   comma-dangle: ["error", {
     "arrays": "always-multiline",
