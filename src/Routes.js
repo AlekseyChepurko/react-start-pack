@@ -3,8 +3,8 @@ import { Router, Switch, Route } from 'react-router';
 import { connect } from 'react-redux';
 import { object, bool } from 'prop-types';
 
-import { Login } from './coponents/Login';
-import { Common, Main } from './coponents/';
+import { Login } from './components/Login';
+import { Common, Main } from './components/';
 
 const Check = (Component) => (<div>
   <Route path='/' component={ Component } />
