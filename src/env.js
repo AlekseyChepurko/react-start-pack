@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const protocol = 'https';
-const INSTA = `${ protocol }://api.instagram.com/v1/`;
+const INSTA = `${ protocol }://api.instagram.com/v1`;
 const serviceURLs = {
   SELF: `${ INSTA }/users/self`,
   SELF_RECENT_PUB: `${ INSTA }/users/self/media/recent`,
