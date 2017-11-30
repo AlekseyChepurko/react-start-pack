@@ -21,6 +21,7 @@ env:
 
 globals:
   __REDUX_DEVTOOLS_EXTENSION__: true
+  INSTAGRAM_CLIENT_ID: true
 
 rules:
   arrow-body-style: 0

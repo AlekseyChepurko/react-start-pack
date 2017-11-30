@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { object, string, func } from 'prop-types';
 import { setAuthToken } from '../../ducks/modules/Auth';
 
-const clientID = INSTAGRAM_CLIENT_ID; // eslint-disable-line
+const clientID = INSTAGRAM_CLIENT_ID;
 
 const _AuthRedirect = (props) => { // eslint-disable-line
   if (props.token) {
