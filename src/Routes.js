@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { object, bool } from 'prop-types';
 
 import { Login } from './components/Login';
-import { Common, Main } from './components/';
+import { Common, Auth } from './components/';
 
 const Check = (Component) => (<div>
   <Route path='/' component={ Component } />
@@ -14,7 +14,7 @@ const Routes = (props) => (<Router history={ props.history }>
   <Switch>
     <Common>
       <Route path='/'>
-        { Check(props.auth ? Main : Login) }
+        { Check(props.auth ? Auth : Login) }
       </Route>
     </Common>
   </Switch>
