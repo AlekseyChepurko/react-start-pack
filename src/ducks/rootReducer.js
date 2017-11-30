@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
+import Auth from './modules/Auth';
 
 export default combineReducers({
-  yourFirstReducer: () => ({
-    initField: 'some string is here',
-  }),
+  Auth,
 });
